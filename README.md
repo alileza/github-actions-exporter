@@ -3,7 +3,7 @@ github-actions-exporter for prometheus
 
 ![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/spendeskplatform/github-actions-exporter)
 ![Docker Pulls](https://img.shields.io/docker/pulls/spendeskplatform/github-actions-exporter)
-[![Go Report Card](https://goreportcard.com/badge/github.com/Spendesk/github-actions-exporter)](https://goreportcard.com/report/github.com/Spendesk/github-actions-exporter)
+[![Go Report Card](https://goreportcard.com/badge/github.com/alileza/github-actions-exporter)](https://goreportcard.com/report/github.com/alileza/github-actions-exporter)
 
 Container image : https://hub.docker.com/repository/docker/spendeskplatform/github-actions-exporter
 
@@ -60,14 +60,14 @@ Gauge type
 | workflow | Workflow Name |
 | status | Workflow status (completed/in_progress) |
 
-### github_workflow_run_duration_ms
+### github_workflow_run_duration_seconds
 Gauge type
 
 **Result possibility**
 
 | Gauge | Description |
 |---|---|
-| milliseconds | Number of milliseconds that a specific workflow run took time to complete. |
+| seconds | Number of seconds that a specific workflow run took time to complete. |
 
 **Fields**
 

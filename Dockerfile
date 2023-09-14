@@ -1,10 +1,13 @@
-FROM golang:1.18 as builder
+FROM golang:1.21-alpine as gobuild
+
+COPY ./ /app
 
 WORKDIR /app
-COPY . .
-RUN bash ./build.sh
 
-FROM alpine:latest as release
-RUN apk update && apk add ca-certificates && rm -rf /var/cache/apk/*
-COPY --from=builder /app/bin/app .
-CMD ["./app"]
+RUN go build -o /bin/github-actions-exporter
+
+FROM prom/busybox:latest
+
+COPY --from=gobuild /bin/github-actions-exporter /bin/github-actions-exporter
+
+ENTRYPOINT [ "/bin/github-actions-exporter" ]

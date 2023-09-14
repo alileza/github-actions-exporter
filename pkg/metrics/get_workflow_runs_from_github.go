@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/spendesk/github-actions-exporter/pkg/config"
+	"github.com/alileza/github-actions-exporter/pkg/config"
 
 	"github.com/google/go-github/v45/github"
 )
@@ -134,9 +134,9 @@ func getWorkflowRunsFromGithub() {
 					created := run.CreatedAt.Time.Unix()
 					updated := run.UpdatedAt.Time.Unix()
 					elapsed := updated - created
-					workflowRunDurationGauge.WithLabelValues(fields...).Set(float64(elapsed * 1000))
+					workflowRunDurationGauge.WithLabelValues(fields...).Set(float64(elapsed))
 				} else {
-					workflowRunDurationGauge.WithLabelValues(fields...).Set(float64(run_usage.GetRunDurationMS()))
+					workflowRunDurationGauge.WithLabelValues(fields...).Set(float64(run_usage.GetRunDurationMS() / 1000))
 				}
 			}
 		}

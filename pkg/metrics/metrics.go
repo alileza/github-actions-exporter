@@ -8,7 +8,7 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/spendesk/github-actions-exporter/pkg/config"
+	"github.com/alileza/github-actions-exporter/pkg/config"
 
 	"github.com/bradleyfalzon/ghinstallation/v2"
 	"github.com/die-net/lrucache"
@@ -36,8 +36,8 @@ func InitMetrics() {
 	)
 	workflowRunDurationGauge = prometheus.NewGaugeVec(
 		prometheus.GaugeOpts{
-			Name: "github_workflow_run_duration_ms",
-			Help: "Workflow run duration (in milliseconds) of all workflow runs created in the last 12hr",
+			Name: "github_workflow_run_duration_seconds",
+			Help: "Workflow run duration (in seconds) of all workflow runs created in the last 12hr",
 		},
 		strings.Split(config.WorkflowFields, ","),
 	)
