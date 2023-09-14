@@ -1,4 +1,7 @@
 # github-actions-exporter
+
+## This is a fork and modified from [Spendesk/github-actions-exporter](https://github.com/Spendesk/github-actions-exporter), changing measurement unit from ms to seconds following Prometheus [unit standard](https://prometheus.io/docs/practices/naming/#base-units)
+
 github-actions-exporter for prometheus
 
 ![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/spendeskplatform/github-actions-exporter)
