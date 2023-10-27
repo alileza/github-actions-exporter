@@ -1,3 +1,8 @@
+## Change of organization
+The project was migrated to another organization because it was no longer maintained.
+In the coming weeks, changes will be made on various points (code and container image) and also an update of all the libraries.
+If there are feature requests, you can make them in the issues. For a better understanding of the requested features, having a detailed description or example will be greatly appreciated.
+
 # github-actions-exporter
 
 ## This is a fork and modified from [Spendesk/github-actions-exporter](https://github.com/Spendesk/github-actions-exporter), changing measurement unit from ms to seconds following Prometheus [unit standard](https://prometheus.io/docs/practices/naming/#base-units)
@@ -9,6 +14,13 @@ github-actions-exporter for prometheus
 [![Go Report Card](https://goreportcard.com/badge/github.com/alileza/github-actions-exporter)](https://goreportcard.com/report/github.com/alileza/github-actions-exporter)
 
 Container image : https://hub.docker.com/repository/docker/spendeskplatform/github-actions-exporter
+
+Helm Chart :
+```
+ helm chart repo: https://Spendesk.github.io/github-actions-exporter/
+ chart: github-actions-exporter
+ version: "0.1.4"
+```
 
 ## Information
 If you want to monitor a public repository, you must put the public_repo option in the repo scope of your github token or Github App Authentication.
