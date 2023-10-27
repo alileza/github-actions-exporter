@@ -1,8 +1,3 @@
-## Change of organization
-The project was migrated to another organization because it was no longer maintained.
-In the coming weeks, changes will be made on various points (code and container image) and also an update of all the libraries.
-If there are feature requests, you can make them in the issues. For a better understanding of the requested features, having a detailed description or example will be greatly appreciated.
-
 # github-actions-exporter
 
 ## This is a fork and modified from [Spendesk/github-actions-exporter](https://github.com/Spendesk/github-actions-exporter), changing measurement unit from ms to seconds following Prometheus [unit standard](https://prometheus.io/docs/practices/naming/#base-units)
